@@ -4,7 +4,7 @@ import Axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
 
-const BACKEND_URL = "https://backend2-mern.onrender.com" || "http://localhost:8080";
+const BACKEND_URL = "https://backend-istc.onrender.com/" || "http://localhost:8080";
 
 function App() {
 
@@ -104,7 +104,7 @@ function App() {
 
     <div className="card text-center">
       <div className="card-header">
-        Clientes
+        Gestión de Clientes 
       </div>
       <div className="card-body">
         <div className="input-group mb-3">
