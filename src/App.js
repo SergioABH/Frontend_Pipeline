@@ -4,7 +4,7 @@ import Axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2'
 
-const BACKEND_URL = "https://backend-istc.onrender.com/" || "http://localhost:8080";
+const BACKEND_URL = "https://backend-istc.onrender.com" || "http://localhost:8080";
 
 function App() {
 
