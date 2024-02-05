@@ -104,7 +104,7 @@ function App() {
 
     <div className="card text-center">
       <div className="card-header">
-        Gestión de Clientes 
+        Clientes 
       </div>
       <div className="card-body">
         <div className="input-group mb-3">
