@@ -21,8 +21,6 @@ jobs:
         run: npm run build
 
       - name: Deploy to Render
-        uses: johnbeynon/render-deploy-action@v0.0.8
-        with:
-          service-id: ${{ secrets.FRONTEND_ID }}
-          api-key: ${{ secrets.API_KEY }}
-          wait-for-success: true
+        run: |
+          render login --api-key=${{ secrets.API_KEY }}
+          render service deploy ${{ secrets.BACKEND_ID }}
