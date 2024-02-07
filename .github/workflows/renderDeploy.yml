@@ -21,8 +21,9 @@ jobs:
         run: npm run build
 
       - name: Deploy to Render
-        uses: actions/node/run-action@2.0.1
-        with:
-          node-version: 16
-          script: |
-            node scripts/deploy.js
+        run: |
+          curl -X POST \
+            https://deploy.render.com/services/${{ secrets.FRONTEND_ID }}/deploys \
+            -H "Authorization: Bearer ${{ secrets.API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{"gitCommit": "${{ github.sha }}"}'
