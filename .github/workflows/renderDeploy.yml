@@ -23,7 +23,7 @@ jobs:
       - name: Deploy to Render
         run: |
           curl -X POST \
-            https://api.render.com/deploy/srv-cn0248ud3nmc73898oq0?key=RyHFZMJexuo \
+            https://api.render.com/deploy/${{ secrets.FRONTEND_ID }}?key=RyHFZMJexuo \
             -H "Authorization: Bearer ${{ secrets.API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{"gitCommit": "${{ github.sha }}"}'

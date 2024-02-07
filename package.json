@@ -12,7 +12,6 @@
     "react-bootstrap": "^2.9.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "render": "^0.1.4",
     "sweetalert2": "^11.10.2",
     "web-vitals": "^2.1.4"
   },
