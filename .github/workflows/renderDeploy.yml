@@ -19,6 +19,11 @@ jobs:
 
       - name: Build application
         run: npm run build
+      
+      - name: Install Render CLI
+        run: |
+          curl -sfL https://install.render.com/cli.sh | bash -s -- -v=latest
+        shell: bash
 
       - name: Deploy to Render
         run: |
