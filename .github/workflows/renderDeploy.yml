@@ -19,13 +19,10 @@ jobs:
 
       - name: Build application
         run: npm run build
-      
-      - name: Install Render CLI
-        run: |
-          curl -sfL https://install.render.com/cli.sh | bash -s -- -v=latest
-        shell: bash
 
       - name: Deploy to Render
-        run: |
-          render login --api-key=${{ secrets.API_KEY }}
-          render service deploy ${{ secrets.BACKEND_ID }}
+        uses: actions/node/run-action@2.0.1
+        with:
+          node-version: 16
+          script: |
+            node scripts/deploy.js
