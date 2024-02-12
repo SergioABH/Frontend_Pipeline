@@ -27,3 +27,4 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{"gitCommit": "${{ github.sha }}"}'
+            
